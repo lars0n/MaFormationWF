@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="MonFormulaire">
+        <input type="text" required placeholder="Nom et Prénom" id="nomcomplet">
+        <input type="submit" value="Je Valide">
+    </form>
+
+    <!-- consigne : avec l'aide de jquery, vous devrez :
+    
+        1. A la soumission du formulaire, cacher le formulaire puis :
+        2. Créer un élement <p>
+        3. Dans cet élément, afficher : Bonjour <nomcomplet> correspondant
+            au nom saisie dans le formulaire.'
+    -->
+
+    <!-- Intégration de la librairie JQuery-->
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!-- Intégration de notre js-->
+    <script>
+    $(function() {
+        $('#MonFormulaire').submit(function(e) {
+            // -- Cette fonction anonyme sera executé a la soumission du formulaire.
+            /*var valeur = $('#nomcomplet').val();
+            $(this).hide('slow');
+            $(this).after('bonjour  ' + valeur);*/
+            $(this).replaceWith('<p>Bonjour ' + $('#nomcomplet').val() + ' !</p>');
+            // -- Permet d'annuler l'action par default du submit du formulaire.
+            e.preventDefault();     
+        })
+    })
+    </script>
+</body>
+</html>
