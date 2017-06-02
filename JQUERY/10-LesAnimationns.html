@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Les Animations en jQuery</title>
+    <style>
+        .baox { padding: 10px;}
+        .carre { position: relative; width: 100px; height: 100px; background: #09f}
+    </style>
+</head>
+<body>
+    <!-- Consigne :
+
+    Avec l'aide de animate()en jQuery :
+
+        1. Au clic sur le bouton, déplacer sur la droite le carré de 250px;
+        2. Augmenter sa taille de 150px;
+        3. Enclencher une alerte a la fin de l'animation'
+
+    -->
+    <div class="box">
+        <p>
+            <button id='play'>Lancer</button>
+            <div class="carre"></div>
+        </p>
+    </div>
+
+        <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+
+    <script>
+        $('#play').on('click', function() {
+            $('.carre')
+            .animate({
+                left: "+=150",
+                height : 150
+            })
+            .animate({
+                width : 150,
+            },
+                function() {
+                    alert("l'animation est fini")
+                }
+            )
+        })
+
+        /* 
+            jQuery dispose aussi de fonctions raccourcis pour les animations les plus courantes :
+            fadeIn(), fadeOut() mais aussi slideDown() et slideUp
+        */
+    </script>
+
+
+</body>
+</html>
