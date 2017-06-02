@@ -2,16 +2,66 @@
 $(function() {
 
     // -- Déclaration de variable
-    var Contacts = [];
+    var Contacts;
+
+    // -- vérifie si contacts localstorage existe
+    if(!JSON.parse(localStorage.getItem('contactsLocalstorage'))) {
+
+        // -- Sinon on attribut un tableux à la variable Contacts
+        Contacts = [];  
+
+    } else {
+
+        // -- recupère les données dans le localStorage est la stocke dans Contacts
+        Contacts = JSON.parse(localStorage.getItem('contactsLocalstorage'))
+
+        // parcours le tableaux récuperé dans le localstorage
+        for (let i = 0; i < Contacts.length; i++) {
+
+            let Contact = Contacts[i];
+
+            // -- fonction qui rajoute les éléments HTML dans le tableaux
+            ajouterContactTableHtml (Contact);
+        }
+    }
+
+/******************* code alternative pour local storage ************ */
+/*
+    // -- local storage
+    // -- recupère les données dans le localStorage est la stocke dans Contacts
+    var Contacts = JSON.parse(localStorage.getItem('contacts'));
+    // -- vérifie si Contacts 
+    if (Contacts == null) {
+        Contacts = [];
+    } else {
+        for (let i = 0; i < Contacts.length; i++) {
+
+            let Contact = Contacts[i];
+
+            ajouterContactTableHtml (Contact);
+
+        }
+    }
+*/
+   
 
     /* -----------------------------------------------
             Déclaration des function
     ------------------------------------------------- */
-
+ 
     // -- Fonction ajouterContact(Contact) : Ajouter un Contact dans le tableau de Contacts,
     // mettre à jour le tableau HTML, réinitialiser le formulaire et afficher une notification.
     function ajouterContact(Contact) {
         Contacts.push(Contact);
+        
+        // -- mette a jours le local storage avec le tableaux Contacts (supprime l'ancien avec le nouveau)
+        var ContactsToString = JSON.stringify(Contacts);
+        localStorage.setItem("contactsLocalstorage",ContactsToString);
+
+        ajouterContactTableHtml (Contact);
+
+        reinitialisationDuFormulaire();
+        afficheUneNotification();              
     }
 
     // -- Fonction RénitilitationDuformulaire() : Après l'ajout d'un contact, on remet le 
@@ -22,7 +72,12 @@ $(function() {
 
     // -- Affichege d'une Notification
     function afficheUneNotification() {
-        $('.alert-contact').show(2000).hide(1000);
+        $('.alert-contact').slideDown('slow').delay(1000).slideUp('slow');
+    }
+
+    function ajouterContactTableHtml (Contact) {
+        $('.aucuncontact').hide();
+        $('tbody').append('<tr><td>' + Contact.nom + '</td>' + '<td>' + Contact.prenom + '</td>' + "<td class='emailcontact'>" + Contact.email + '</td>' + '<td>' + Contact.tel + '<td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>' + '</td></tr>')
     }
 
     // -- Vérification de la présence d'un contact dans contacts
@@ -72,10 +127,11 @@ $(function() {
         $('#contact .text-danger').remove();
 
         // -- declaration des variables
-        var nom     = $('#nom');
-        var prenom  = $('#prenom');
-        var email   = $('#email');
-        var tel     = $('#tel');
+        var nom, prenom, email, tel;
+        nom     = $('#nom');
+        prenom  = $('#prenom');
+        email   = $('#email');
+        tel     = $('#tel');
 
         if(nom.val().length == 0) {
             nom.parent().addClass('has-error');
@@ -110,18 +166,32 @@ $(function() {
             }
        
             if (!estCeQunContactEstPresent(Contact)) {
-                ajouterContact(Contact);
-                reinitialisationDuFormulaire();
-                afficheUneNotification();
-
-                $('.aucuncontact').remove()
-                $('#LesContacts').find('tbody').append('<tr>' + '<td>' + Contact.nom + '</td>' + '<td>' + Contact.prenom + '</td>' + '<td>' + Contact.email + '</td>' + '<td>' + Contact.tel + '</td>' +'</tr>')
-                
-
+                ajouterContact(Contact);   
             } else {
                 $('section').before("<div class='alert alert-danger'>Votre Contact est déja présent dans la liste!</div>")
             }
             console.log(Contacts);
+        }
+    });
+
+    $(document).on('click','.glyphicon-remove' , function(e) {
+        $(this).parent().parent().remove();
+        var email = $(this).parent().parent().find('.emailcontact').html();
+        
+        for (let i = 0; i < Contacts.length; i++) {
+
+            let Contact = Contacts[i];
+
+            if(Contact.email === email) {
+                Contacts.splice(i, 1)
+            }
+
+            ContactsToString = JSON.stringify(Contacts);
+            localStorage.setItem("contactsLocalstorage",ContactsToString);
+
+            if (Contacts.length == 0) {
+                $('.aucuncontact').show();
+            }
         }
     })
 })
