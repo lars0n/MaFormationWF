@@ -1,0 +1,32 @@
+<form #form="ngForm" (ngSubmit)="submitContact()" *ngIf="active">
+
+  <!-- Grace à l'identifiant #form plus haut, je peux connaitre ci-dessous
+       L'état de la validation de mon formulaire' -->
+  <!--{{form.valid}}-->
+
+  <div class="form-group has-feedback" [class.has-error]="fullname.invalid && fullname.touched">
+    <input type="text" class="form-control" name="fullname"
+    required placeholder="Saisissez votre nom complet..."
+    [(ngModel)]="nouveauContact.fullname" #fullname="ngModel">
+
+    <div *ngIf="fullname.invalid && fullname.touched">
+      <span class="help-block">Vous devez saisir votre nom complet</span>
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <div class="form-group has-feedback" [ngClass]="{ 'has-error' : username.invalid && username.touched}">
+    <input type="text" class="form-control" name="username"
+    required placeholder="Saisissez votre nom d'utilisateur..."
+    [(ngModel)]="nouveauContact.username" #username="ngModel">
+
+    <div *ngIf="username.invalid && username.touched">
+      <span class="help-block">Vous devez saisir votre username</span>
+      <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-block btn-primary" [disabled]="form.invalid">
+    Ajouter le Contact
+  </button>
+</form>

@@ -38,4 +38,14 @@ export class AppComponent {
     this.contactActif = contact;
     console.log(this.contactActif);  
   }
+
+  // -- Si unContactEstCree j'apelle ma fonction ajouterContactDansListe
+  ajouterContactDansListe(event) {
+    console.log(event);
+
+    // -- Insertion du contact dans le tableau Contacts
+    this.Contacts.push(event.contact);
+
+    // -- insertion dans le local storage, bdd, ...
+  }
 }
