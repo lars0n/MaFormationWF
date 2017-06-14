@@ -1,0 +1,981 @@
+# Translation of Themes - Ample in French (France)
+# This file is distributed under the same license as the Themes - Ample package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-09-12 06:39:51+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: fr\n"
+"Project-Id-Version: Themes - Ample\n"
+
+#. #-#-#-#-#  ample.pot (Ample 1.1.6)  #-#-#-#-#
+#. Theme Name of the plugin/theme
+#: inc/admin/class-ample-admin.php:349 inc/demo-config.php:24
+msgid "Ample"
+msgstr "Ample"
+
+#: inc/widgets/widgets.php:320 inc/widgets/widgets.php:669
+msgid "Background Image:"
+msgstr "Image d’arrière plan :"
+
+#: inc/widgets/widgets.php:150 inc/widgets/widgets.php:328
+#: inc/widgets/widgets.php:677
+msgid "Select an Image"
+msgstr "Choix d'une image"
+
+#: inc/widgets/widgets.php:150 inc/widgets/widgets.php:328
+#: inc/widgets/widgets.php:677
+msgid "Use image"
+msgstr "Utiliser l'image"
+
+#: inc/widgets/widgets.php:150 inc/widgets/widgets.php:328
+#: inc/widgets/widgets.php:677
+msgid "Choose an image"
+msgstr "Choix d'une image"
+
+#: inc/customizer.php:82
+msgid "Switch to new responsive menu."
+msgstr "Basculer vers le nouveau menu responsive"
+
+#: inc/customizer.php:69
+msgid "Responsive Menu Style"
+msgstr "Style de menu responsive"
+
+#: inc/admin/class-ample-admin.php:473 inc/customizer.php:636
+msgid "View Pro"
+msgstr "Voir la version Pro"
+
+#: inc/admin/class-ample-admin.php:467
+msgid "Emails/Priority Support Ticket"
+msgstr "Forum + E-mail/ticket de support"
+
+#: inc/admin/class-ample-admin.php:466
+msgid "Forum"
+msgstr "Forum"
+
+#: inc/admin/class-ample-admin.php:460
+msgid "Demo Content"
+msgstr "Contenu de démo"
+
+#: inc/admin/class-ample-admin.php:455
+msgid "Footer Copyright Editor"
+msgstr "Éditeur de copyright du pied"
+
+#: inc/admin/class-ample-admin.php:450
+msgid "TG: Pricing Table"
+msgstr "TB : Tableau de prix"
+
+#: inc/admin/class-ample-admin.php:445
+msgid "TG: Team"
+msgstr "TG : Équipe"
+
+#: inc/admin/class-ample-admin.php:440
+msgid "TG: Fun Facts"
+msgstr "TG : Faits funs"
+
+#: inc/admin/class-ample-admin.php:435
+msgid "TG: Our Clients"
+msgstr "TG : Nos clients"
+
+#: inc/admin/class-ample-admin.php:430
+msgid "TG: Testimonial"
+msgstr "TG : Témoignage"
+
+#: inc/admin/class-ample-admin.php:427
+msgid "9"
+msgstr "9"
+
+#: inc/admin/class-ample-admin.php:426
+msgid "4"
+msgstr "4"
+
+#: inc/admin/class-ample-admin.php:425
+msgid "Custom Widgets"
+msgstr "Widgets personnalisés"
+
+#: inc/admin/class-ample-admin.php:420
+msgid "WPML/Polylang Compatible"
+msgstr "Compatible WPML/Polylang"
+
+#: inc/admin/class-ample-admin.php:415
+msgid "Woocommerce archive page Layout"
+msgstr "Mise en page d'archive WooCommerce par défaut"
+
+#: inc/admin/class-ample-admin.php:410
+msgid "Woocommerce Compatible"
+msgstr "Compatible WooCommerce"
+
+#: inc/admin/class-ample-admin.php:405
+msgid "Translation Ready"
+msgstr "Prêt à traduire"
+
+#: inc/admin/class-ample-admin.php:402
+msgid "Social Links + Header text option"
+msgstr "Liens sociaux + Option de texte d’en-tête"
+
+#: inc/admin/class-ample-admin.php:400
+msgid "Additional Top Header"
+msgstr "En-tête haut additionnel"
+
+#: inc/admin/class-ample-admin.php:395
+msgid "Social Links"
+msgstr "Liens sociaux"
+
+#: inc/admin/class-ample-admin.php:392
+msgid "5"
+msgstr "5"
+
+#: inc/admin/class-ample-admin.php:391
+msgid "1"
+msgstr "1"
+
+#: inc/admin/class-ample-admin.php:385
+msgid "Font Size options"
+msgstr "Options de taille de police"
+
+#: inc/admin/class-ample-admin.php:382
+msgid "Primary color option & 35+"
+msgstr "Option de couleur principale & 35+"
+
+#: inc/admin/class-ample-admin.php:381
+msgid "Primary Color Option"
+msgstr "Option de couleur principale"
+
+#: inc/admin/class-ample-admin.php:380
+msgid "Color Palette"
+msgstr "Palette de couleur"
+
+#: inc/admin/class-ample-admin.php:377
+msgid "600+"
+msgstr "600+"
+
+#: inc/admin/class-ample-admin.php:375
+msgid "Google Fonts"
+msgstr "Polices Google"
+
+#: inc/admin/class-ample-admin.php:372
+msgid "Slides type, duration & delay time"
+msgstr "Type de panneaux, durée et temps de délai"
+
+#: inc/admin/class-ample-admin.php:370
+msgid "Slider Settings"
+msgstr "Réglages de diaporama"
+
+#: inc/admin/class-ample-admin.php:367
+msgid "Unlimited Slides"
+msgstr "Panneaux illimités"
+
+#: inc/admin/class-ample-admin.php:366
+msgid "4 Slides"
+msgstr "4 Panneaux"
+
+#: inc/admin/class-ample-admin.php:360
+msgid "Use as One Page theme"
+msgstr "Utiliser comme thème en une page"
+
+#: inc/admin/class-ample-admin.php:357
+msgid "$69"
+msgstr "$69"
+
+#: inc/admin/class-ample-admin.php:356
+msgid "Free"
+msgstr "Gratuit"
+
+#: inc/admin/class-ample-admin.php:355
+msgid "Price"
+msgstr "Prix"
+
+#: inc/admin/class-ample-admin.php:350
+msgid "Ample Pro"
+msgstr "Ample Pro"
+
+#: inc/admin/class-ample-admin.php:348
+msgid "Features"
+msgstr "Fonctionnalités"
+
+#: inc/admin/class-ample-admin.php:325
+msgid "WPML"
+msgstr "WPML"
+
+#: inc/admin/class-ample-admin.php:322 inc/admin/class-ample-admin.php:326
+msgid "Fully Compatible in Pro Version"
+msgstr "Pleinement compatible en version Pro"
+
+#: inc/admin/class-ample-admin.php:321
+msgid "Polylang"
+msgstr "Polylang"
+
+#: inc/admin/class-ample-admin.php:319
+msgid "WooCommerce"
+msgstr "WooCommerce"
+
+#: inc/admin/class-ample-admin.php:318
+msgid "WP-PageNavi"
+msgstr "WP-PageNavi"
+
+#: inc/admin/class-ample-admin.php:317
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
+
+#: inc/admin/class-ample-admin.php:314
+msgid "Easy Social Sharing"
+msgstr "Easy Social Sharing"
+
+#: inc/admin/class-ample-admin.php:312 inc/admin/class-ample-admin.php:315
+msgid " by ThemeGrill"
+msgstr " par ThemeGrill"
+
+#: inc/admin/class-ample-admin.php:311
+msgid "Social Icons"
+msgstr "Social Icons"
+
+#: inc/admin/class-ample-admin.php:309
+msgid "This theme recommends following plugins:"
+msgstr "Ce thème recommande les extensions suivantes :"
+
+#: inc/admin/class-ample-admin.php:256
+msgid "View changelog below:"
+msgstr "Voir l’historique ci dessous :"
+
+#: inc/admin/class-ample-admin.php:239
+msgid "Go to Dashboard"
+msgstr "Aller au Tableau de bord"
+
+#: inc/admin/class-ample-admin.php:239
+msgid "Go to Dashboard &rarr; Home"
+msgstr "Retour au Tableau de bord &rarr; Accueil"
+
+#: inc/admin/class-ample-admin.php:236
+msgid "Return to Dashboard &rarr; Updates"
+msgstr "Retour au Tableau de bord &rarr; Mises à jour"
+
+#: inc/admin/class-ample-admin.php:236
+msgid "Return to Updates"
+msgstr "Retour aux mises à jour"
+
+#: inc/admin/class-ample-admin.php:220
+msgid "Click below to translate this theme into your own language."
+msgstr "Cliquez ci-dessous pour traduire ce thème dans votre langue."
+
+#: inc/admin/class-ample-admin.php:216 inc/admin/class-ample-admin.php:224
+msgid "Translate"
+msgstr "Traduire"
+
+#: inc/admin/class-ample-admin.php:209
+msgid "Please send it via our sales contact page."
+msgstr "Veuillez l’envoyer via notre page de contact des ventes"
+
+#: inc/admin/class-ample-admin.php:208
+msgid "Got sales related question?"
+msgstr "Vous avez une question relative à la vente ?"
+
+#: inc/admin/class-ample-admin.php:203 inc/admin/class-ample-admin.php:343
+msgid "Upgrade to PRO version for more exciting features."
+msgstr "Mettez à jour en version PRO pour plus de fonctionnaliés exitantes."
+
+#: inc/admin/class-ample-admin.php:202
+msgid "Need more features?"
+msgstr "Besoin de plus de fonctionalités ?"
+
+#: inc/admin/class-ample-admin.php:198 inc/admin/class-ample-admin.php:465
+msgid "Support"
+msgstr "Support"
+
+#: inc/admin/class-ample-admin.php:197
+msgid "Please put it in our dedicated support forum."
+msgstr "Veuillez le dire dans notre forum de support dédié."
+
+#: inc/admin/class-ample-admin.php:196
+msgid "Got theme support question?"
+msgstr "Question de support du thème ?"
+
+#: inc/admin/class-ample-admin.php:191
+msgid "Please view our documentation page to setup the theme."
+msgstr "Veuillez lire notre page de documentation pour configurer le thème."
+
+#: inc/admin/class-ample-admin.php:186
+msgid "Customize"
+msgstr "Personnaliser"
+
+#: inc/admin/class-ample-admin.php:185
+msgid "All Theme Options are available via Customize screen."
+msgstr "Toutes les options du thème sont disponibles via l’écran Personnaliser"
+
+#: inc/admin/class-ample-admin.php:184
+msgid "Theme Customizer"
+msgstr "Personnaliser le thème"
+
+#: inc/admin/class-ample-admin.php:150
+msgid "Changelog"
+msgstr "Historique"
+
+#: inc/admin/class-ample-admin.php:147
+msgid "Free Vs Pro"
+msgstr "Gratuit Vs Pro"
+
+#: inc/admin/class-ample-admin.php:144
+msgid "Supported Plugins"
+msgstr "Extensions supportées"
+
+#: inc/admin/class-ample-admin.php:95
+msgid "Get started with Ample"
+msgstr "Commencer avec Ample"
+
+#: inc/admin/class-ample-admin.php:93
+msgid "Welcome! Thank you for choosing ample! To fully take advantage of the best our theme can offer please make sure you visit our %swelcome page%s."
+msgstr "Bienvenue ! Merci d’avoir choisi Ample ! Pour tirer pleinement avantage de ce que notre meilleur thème peut offrir, visitez notre %spage de bienvenue%s."
+
+#: inc/admin/class-ample-admin.php:92
+msgid "Dismiss"
+msgstr "Retirer"
+
+#: inc/admin/class-ample-admin.php:78
+msgid "Cheatin&#8217; huh?"
+msgstr "Alors, on triche ?"
+
+#: inc/admin/class-ample-admin.php:74
+msgid "Action failed. Please refresh the page and retry."
+msgstr "Action échouée. Actualisez la page et essayez à nouveau"
+
+#: inc/admin/class-ample-admin.php:36 inc/admin/class-ample-admin.php:115
+msgid "About"
+msgstr "A propos"
+
+#: inc/customizer.php:676
+msgid "Ample Important Links"
+msgstr "Liens importants Ample"
+
+#: inc/admin/class-ample-admin.php:134 inc/admin/class-ample-admin.php:204
+msgid "View PRO version"
+msgstr "Voir la Version Pro"
+
+#: inc/admin/class-ample-admin.php:130 inc/customizer.php:640
+msgid "Theme Info"
+msgstr "Information du thème"
+
+#: inc/functions.php:459
+msgid "<span class=\"entry-date\"><i class=\"fa fa-aw fa-calendar-o\"></i> <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a></span>"
+msgstr "<span class=\"entry-date\"><i class=\"fa fa-aw fa-calendar-o\"></i> <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\">%3$s</a></span>"
+
+#. #-#-#-#-#  ample.pot (Ample 1.1.6)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: inc/admin/class-ample-admin.php:390
+msgid "Business Template"
+msgstr "Modèle business"
+
+#. Template Name of the plugin/theme
+msgid "Contact Page Template"
+msgstr "Modèle de page contact"
+
+#: sidebar-left.php:19 sidebar.php:30
+msgid "This is an example widget to show how the Left sidebar looks by default. You can add custom widgets from the %swidgets screen%s in the admin. If custom widgets are added then this will be replaced by those widgets"
+msgstr "Ceci est un widget d'exemple pour montrer le style par défaut de la barre de gauche. Vous pouvez ajouter des widgets personnalisés à partir de l'%sécran Widgets%s. Si des widgets sont ajoutés ils remplaceront ceux-ci"
+
+#: sidebar-left.php:18 sidebar.php:29
+msgid "Example Widget"
+msgstr "Widget Exemple"
+
+#: sidebar.php:25
+msgid "Right"
+msgstr "Droite"
+
+#: inc/admin/class-ample-admin.php:210 sidebar.php:23
+msgid "Contact Page"
+msgstr "Page contact"
+
+#: inc/admin/class-ample-admin.php:132 inc/customizer.php:652
+msgid "View Demo"
+msgstr "Voir la Démo"
+
+#: searchform.php:13
+msgid "Search"
+msgstr "Recherche"
+
+#: inc/customizer.php:689
+msgid "If you like our work. Buy us a beer."
+msgstr "Si vous aimez notre travail. Payez nous une bière"
+
+#: inc/admin/class-ample-admin.php:136 inc/customizer.php:656
+msgid "Rate this theme"
+msgstr "Notez ce th&egrave;me"
+
+#: inc/customizer.php:603
+msgid "Category to hide from Blog"
+msgstr "Catégorie à cacher du Blog"
+
+#: inc/customizer.php:538
+msgid "Upload favicon for your site."
+msgstr "Envoi du Favicon de votre site"
+
+#: inc/customizer.php:524
+msgid "Check to activate favicon. Upload fav icon from below option"
+msgstr "Cochez pour activer le favicon. Envoi du favicon ci-dessous"
+
+#: inc/customizer.php:616
+msgid "Select a Category or Categories to hide its posts from Blog page."
+msgstr "Choix de(s) catégorie(s) à cacher de la page Blog"
+
+#: inc/customizer.php:644
+msgid "Free Support"
+msgstr "Support Gratuit"
+
+#: inc/admin/class-ample-admin.php:190 inc/admin/class-ample-admin.php:192
+#: inc/customizer.php:648
+msgid "Documentation"
+msgstr "Documentation"
+
+#: inc/customizer.php:511
+msgid "Favicon"
+msgstr "Favicon"
+
+#: inc/customizer.php:504
+msgid "Additional"
+msgstr "Additionnel"
+
+#: inc/customizer.php:491
+msgid "Enter link to redirect"
+msgstr "Entrez le lien de redirection du panneau"
+
+#: inc/customizer.php:476
+msgid "Enter button text"
+msgstr "Entrez le texte du bouton"
+
+#: inc/customizer.php:462
+msgid "Enter title for this slide"
+msgstr "Entrez le titre du panneau"
+
+#: inc/customizer.php:425
+msgid "Check to activate slider."
+msgstr "Cochez ceci pour activer le diaporama"
+
+#: inc/customizer.php:412
+msgid "Activate slider"
+msgstr "Activer Diaporama"
+
+#: inc/customizer.php:447
+msgid "Upload image"
+msgstr "Envoi d'Image"
+
+#: inc/customizer.php:433
+msgid "Slider #%1$s"
+msgstr "Diaporama #%1$s"
+
+#: inc/customizer.php:272
+msgid "Select default layout. This layout will be reflected in whole site archives, search etc. The layout for a single post and page can be controlled from below options."
+msgstr "Choix du style par défaut. Ce style affectera les archives, la recherche, etc. Le style pour les articles et les pages peut être géré par les options ci-dessous"
+
+#: inc/customizer.php:286
+msgid "Default layout for pages only"
+msgstr "Style par défaut des pages"
+
+#: inc/customizer.php:300
+msgid "Select default layout for pages. This layout will be reflected in all pages unless unique layout is set for specific page."
+msgstr "Choix du style par défaut pour les pages. Ce style affectera les pages ne possédant pas un style spécifique"
+
+#: inc/customizer.php:314
+msgid "Default layout for single posts only"
+msgstr "Style par défaut des articles"
+
+#: inc/customizer.php:328
+msgid "Select default layout for single posts. This layout will be reflected in all single posts unless unique layout is set for specific post."
+msgstr "Choix du style par défaut pour les articles. Ce style affectera les articles ne possédant pas un style spécifique"
+
+#: inc/customizer.php:344
+msgid "Primary color option"
+msgstr "Option de couleur principale"
+
+#: inc/customizer.php:380
+msgid "Custom CSS"
+msgstr "CSS personnalisé"
+
+#: inc/customizer.php:356
+msgid "This will reflect in links, buttons and many others. Choose a color to match your site."
+msgstr "Ceci affectera les liens, boutons et autres. Choisissez une couleur accordée à votre site"
+
+#: inc/admin/class-ample-admin.php:365 inc/customizer.php:407
+msgid "Slider"
+msgstr "Diaporama"
+
+#: inc/customizer.php:393
+msgid "Write your custom css."
+msgstr "Entrez ici votre code CSS"
+
+#: inc/customizer.php:116
+msgid "Choose Background Color for Header Title Bar"
+msgstr "Choix de une couleur de fond pour le titre de barre d'en-tête"
+
+#: inc/customizer.php:131
+msgid "Choose Text Color for Header Title Bar"
+msgstr "Choix de couleur du texte pour le titre de barre d'en-tête"
+
+#: inc/customizer.php:101
+msgid "Upload Background Image for Header Title Bar."
+msgstr "Choix d'une image à utiliser pour le fond de la barre du titre d'en-tête"
+
+#: inc/customizer.php:88
+msgid "Header Title Bar Background Image"
+msgstr "Image de Fond Titre Barre En-tête"
+
+#: inc/customizer.php:56
+msgid "Choose the option that you want."
+msgstr "Choix de l'option voulue"
+
+#: inc/customizer.php:156
+msgid "Position Below: Display the Header image just below the site title and main menu part."
+msgstr "Position au dessous : Affiche l'image d'en-tête juste sous le titre du site et la partie du menu principal."
+
+#: inc/customizer.php:155
+msgid "Position Above (Default): Display the Header image just above the site title and main menu part."
+msgstr "Position au-dessus (par défaut): Affiche l'image d'en-tête juste au-dessus du titre du site et une partie de menu principal."
+
+#: inc/customizer.php:152
+msgid "Choose top header image display position."
+msgstr "Choix de position pour l'image d'en-tête haut"
+
+#: inc/customizer.php:139
+msgid "Header Image Position"
+msgstr "Position Image En-tête"
+
+#: inc/customizer.php:172
+msgid "Site Layout"
+msgstr "Style du site"
+
+#: inc/customizer.php:165
+msgid "Design"
+msgstr "Design"
+
+#: inc/customizer.php:185
+msgid "Choose your site layout. The change is reflected in whole site."
+msgstr "Choix du style du site. Ce changement affectera tout le site"
+
+#: inc/customizer.php:189
+msgid "Boxed layout"
+msgstr "Style Boîte"
+
+#: inc/customizer.php:188
+msgid "Wide layout"
+msgstr "Style Large"
+
+#: inc/customizer.php:258
+msgid "Default layout"
+msgstr "Style par Défaut"
+
+#: inc/customizer.php:43
+msgid "Show"
+msgstr "Voir"
+
+#: inc/customizer.php:35
+msgid "Upload logo for your header."
+msgstr "Envoi de logo pour l'en-tête"
+
+#: inc/customizer.php:21
+msgid "Header Logo"
+msgstr "Logo En-tête"
+
+#: inc/customizer.php:59
+msgid "Header Logo Only"
+msgstr "Logo d'en-tête seul"
+
+#: inc/customizer.php:62
+msgid "Disable"
+msgstr "Désactiver"
+
+#: inc/customizer.php:61
+msgid "Show Both"
+msgstr "Afficher les deux"
+
+#: inc/customizer.php:60
+msgid "Header Text Only"
+msgstr "Texte d'en-tête seul"
+
+#: inc/customizer.php:13
+msgid "Header"
+msgstr "En-tête"
+
+#: no-results.php:25
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Il semble que rien ne soit trouvé pour votre recherche."
+
+#: no-results.php:20
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Désolé, mais rien ne correspond à vos critères."
+
+#: no-results.php:16
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Prêt à publier votre 1er article? <a href=\"%1$s\">Lancez vous ici</a>."
+
+#: navigation.php:45
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: navigation.php:44
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: navigation.php:37
+msgid "Next &rarr;"
+msgstr "Suivant &rarr;"
+
+#: navigation.php:36
+msgid "&larr; Previous"
+msgstr "&larr; Précédent"
+
+#: navigation.php:25
+msgid "Next &raquo;"
+msgstr "Suivant &raquo;"
+
+#: inc/widgets/widgets.php:521
+msgid "Show latest Posts"
+msgstr "Affiche les derniers articles"
+
+#: inc/widgets/widgets.php:489
+msgid "TG: Featured Posts"
+msgstr "TG : Articles en avant"
+
+#: inc/widgets/widgets.php:487
+msgid "Display latest posts or posts of specific category"
+msgstr "Affiche les articles récents d'une catégorie spécifique"
+
+#: inc/widgets/widgets.php:366
+msgid "Note: Link to redirect. If empty than it will redirect to selected category."
+msgstr "Note : Lien pour rediriger, si vide il dirigera vers la catégorie choisie"
+
+#: inc/widgets/widgets.php:363 inc/widgets/widgets.php:697
+msgid "Button Redirect Link:"
+msgstr "Lien Redirection Bouton :"
+
+#: inc/widgets/widgets.php:359 inc/widgets/widgets.php:693
+msgid "Button Text:"
+msgstr "Texte Bouton :"
+
+#: inc/widgets/widgets.php:522
+msgid "Show posts from a category"
+msgstr "Affiche les articles à partir d'une catégorie"
+
+#: inc/widgets/widgets.php:640
+msgid "Use this widget to show the call to action section."
+msgstr "Utilisez ce widget pour afficher la section d'appel à action"
+
+#: inc/widgets/widgets.php:642
+msgid "TG: Call To Action Widget"
+msgstr "TG : Widget d'appel à action"
+
+#: inc/widgets/widgets.php:689
+msgid "Call to Action Main Text"
+msgstr "Texte Principal d'Appel à Action"
+
+#: navigation.php:24
+msgid "&laquo; Previous"
+msgstr "&laquo; Précédent"
+
+#: inc/widgets/widgets.php:338 inc/widgets/widgets.php:687
+msgid "OTHER SETTINGS :"
+msgstr "Autres paramètres :"
+
+#: inc/widgets/widgets.php:354 inc/widgets/widgets.php:526
+msgid "Select category"
+msgstr "Choix de catégorie"
+
+#: inc/widgets/widgets.php:349 inc/widgets/widgets.php:516
+msgid "Number of posts to display:"
+msgstr "Nombre d'articles à afficher :"
+
+#: inc/widgets/widgets.php:335 inc/widgets/widgets.php:684
+msgid "Fixed"
+msgstr "Fixe"
+
+#: inc/widgets/widgets.php:315 inc/widgets/widgets.php:664
+msgid "Background Color:"
+msgstr "Couleur de Fond :"
+
+#: inc/widgets/widgets.php:314 inc/widgets/widgets.php:663
+msgid "DESIGN SETTINGS :"
+msgstr "Paramètres de Design :"
+
+#: inc/widgets/widgets.php:287
+msgid "TG: Portfolio"
+msgstr "TG : Portfolio"
+
+#: inc/widgets/widgets.php:285
+msgid "Display portfolio by using specific category"
+msgstr "Afficher le portfolio en utilisant une catégorie spécifique"
+
+#: inc/widgets/widgets.php:173
+msgid "Icon Class:"
+msgstr "Classe Icône :"
+
+#: inc/widgets/widgets.php:334 inc/widgets/widgets.php:683
+msgid "Scroll"
+msgstr "Défilant"
+
+#: inc/widgets/widgets.php:333 inc/widgets/widgets.php:682
+msgid "Background attachment:"
+msgstr "Fond des pièces jointes :"
+
+#: inc/widgets/widgets.php:167
+msgid "Page"
+msgstr "Page"
+
+#: inc/widgets/widgets.php:162
+msgid "Select the page to display Title and Excerpt."
+msgstr "Choix de la page pour afficher le titre et l'extrait"
+
+#: inc/widgets/widgets.php:157
+msgid "<a href=\"%s\" target=\"_blank\">Refer here</a> For Icon Class"
+msgstr "<a href=\"%s\" target=\"_blank\">Lisez ceci</a> Pour l'Icon Class"
+
+#: inc/widgets/widgets.php:142
+msgid "Image:"
+msgstr "Image :"
+
+#: inc/widgets/widgets.php:138 inc/widgets/widgets.php:345
+#: inc/widgets/widgets.php:512
+msgid "Description"
+msgstr "Description"
+
+#: inc/widgets/widgets.php:38
+msgid "Business Sidebar"
+msgstr "Barre Business"
+
+#: inc/widgets/widgets.php:49
+msgid "Shows widgets on Error 404 page."
+msgstr "Afficher les widgets sur la page 404"
+
+#: inc/widgets/widgets.php:47
+msgid "Error 404 Page Sidebar"
+msgstr "Barre Droite sur 404"
+
+#: inc/widgets/widgets.php:40
+msgid "Shows widgets on Business Page Template."
+msgstr "Afficher les widgets sur la page Business"
+
+#: inc/widgets/widgets.php:58
+msgid "Shows widgets on Right/Left side of Contact page."
+msgstr "Affiche des widgets sur le côté droit/gauche de la page contact"
+
+#: inc/widgets/widgets.php:56
+msgid "Contact Page Sidebar"
+msgstr "Barre Page Contact"
+
+#: inc/widgets/widgets.php:92
+msgid "Footer Sidebar4"
+msgstr "Barre Pied 4"
+
+#: inc/widgets/widgets.php:67 inc/widgets/widgets.php:76
+#: inc/widgets/widgets.php:85 inc/widgets/widgets.php:94
+msgid "Shows widgets on footer."
+msgstr "Affiche les widgets dans le pied"
+
+#: inc/widgets/widgets.php:65
+msgid "Footer Sidebar1"
+msgstr "Barre Pied 1"
+
+#: inc/widgets/widgets.php:83
+msgid "Footer Sidebar3"
+msgstr "Barre Pied 3"
+
+#: inc/widgets/widgets.php:74
+msgid "Footer Sidebar2"
+msgstr "Barre Pied 2"
+
+#: inc/widgets/widgets.php:135 inc/widgets/widgets.php:341
+#: inc/widgets/widgets.php:509
+msgid "Title:"
+msgstr "Titre :"
+
+#: inc/widgets/widgets.php:116
+msgid "TG: Service Widget"
+msgstr "TG : Widget Service"
+
+#: inc/widgets/widgets.php:114
+msgid "Show your some pages as services."
+msgstr "Montrer quelques pages comme des services"
+
+#: inc/widgets/widgets.php:31
+msgid "Shows widgets at left side."
+msgstr "Afficher les widgets sur le côté gauche"
+
+#: inc/widgets/widgets.php:22
+msgid "Shows widgets at right side."
+msgstr "Afficher les widgets sur le côté droit"
+
+#: inc/header-functions.php:173
+msgid "You are here:"
+msgstr "Vous êtes ici :"
+
+#: inc/header-functions.php:141
+msgid "Search Results For: %s"
+msgstr "Résultats de recherche pour %s"
+
+#: inc/header-functions.php:138
+msgid "Page NOT Found"
+msgstr "Page non trouvée"
+
+#: inc/header-functions.php:133
+msgid "Archives"
+msgstr "Archives"
+
+#: inc/header-functions.php:126
+msgid "Year: %s"
+msgstr "Année : %s"
+
+#: inc/header-functions.php:123
+msgid "Month: %s"
+msgstr "Mois : %s"
+
+#: inc/header-functions.php:120
+msgid "Day: %s"
+msgstr "Jour : %s"
+
+#: inc/header-functions.php:112
+msgid "Author: %s"
+msgstr "Auteur : %s"
+
+#: inc/functions.php:524
+msgid "Reply"
+msgstr "Répondre"
+
+#: inc/functions.php:519
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de validation."
+
+#: inc/functions.php:511
+msgid "%1$s at %2$s"
+msgstr "%1$s à %2$s"
+
+#: inc/functions.php:508
+msgid "Post author"
+msgstr "Auteur Article"
+
+#: inc/functions.php:493
+msgid "(Edit)"
+msgstr "(Modifier)"
+
+#: inc/functions.php:493
+msgid "Pingback:"
+msgstr "Ping :"
+
+#: inc/functions.php:470
+msgid "Comments Off"
+msgstr "Commentaires fermés"
+
+#: inc/functions.php:470
+msgid "% Comments"
+msgstr "% Commentaires"
+
+#: inc/functions.php:470
+msgid "1 Comment"
+msgstr "1 Commentaire"
+
+#: inc/functions.php:470
+msgid "No Comments"
+msgstr "0 Commentaires"
+
+#: inc/functions.php:135
+msgid "Powered by %s."
+msgstr "Propulsé par %s"
+
+#: inc/functions.php:135
+msgid "Copyright &copy; %1$s %2$s."
+msgstr "Copyright &copy; %1$s %2$s."
+
+#: inc/functions.php:135
+msgid "Theme: %1$s by %2$s."
+msgstr "Traduit par <a href=\"http://www.wptrads.com\" target= _blank>Wp Trads</a>. Thème %1$s par %2$s"
+
+#. #-#-#-#-#  ample.pot (Ample 1.1.6)  #-#-#-#-#
+#. Author of the plugin/theme
+#: inc/functions.php:133
+msgid "ThemeGrill"
+msgstr "Theme Grill"
+
+#: inc/functions.php:131
+msgid "WordPress"
+msgstr "WordPress"
+
+#: inc/admin/meta-boxes.php:43
+msgid "No Sidebar Full Width"
+msgstr "Pleine largeur (pas de barre)"
+
+#: inc/admin/meta-boxes.php:48
+msgid "No Sidebar Content Centered"
+msgstr "Pas de  Barre, Contenu Centré"
+
+#: inc/admin/meta-boxes.php:53
+msgid "Both Sidebar"
+msgstr "Les 2 Barres"
+
+#: inc/admin/meta-boxes.php:38 inc/widgets/widgets.php:29
+msgid "Left Sidebar"
+msgstr "Barre Gauche"
+
+#: inc/admin/meta-boxes.php:33 inc/widgets/widgets.php:20
+msgid "Right Sidebar"
+msgstr "Barre Droite"
+
+#: inc/admin/meta-boxes.php:16 inc/admin/meta-boxes.php:18
+msgid "Select Layout"
+msgstr "Choix de style"
+
+#: inc/admin/meta-boxes.php:28
+msgid "Default Layout"
+msgstr "Style par défaut"
+
+#: functions.php:81
+msgid "Footer Menu"
+msgstr "Menu Pied"
+
+#: functions.php:80
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: content-single.php:24
+msgid "Tagged on: "
+msgstr "Mot clé :"
+
+#: content.php:42 inc/widgets/widgets.php:618
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: content-page.php:26 content-single.php:35
+msgid "Edit"
+msgstr "Modifier"
+
+#: content-page.php:20 content-single.php:29
+msgid "Pages:"
+msgstr "Pages :"
+
+#: comments.php:67
+msgid "Comments are closed."
+msgstr "Commentaires clos."
+
+#: comments.php:40 comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires plus récents &rarr;"
+
+#: comments.php:39 comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Commentaires plus anciens"
+
+#: comments.php:38 comments.php:55
+msgid "Comment navigation"
+msgstr "Navigation Commentaire"
+
+#: 404.php:26
+msgid "It looks like nothing was found at this location. Try the search below."
+msgstr "Il semble qu'il n'y ait rien ici. Essayer une recherche?"
+
+#: comments.php:31
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un commentaire sur &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s commentaires sur &ldquo;%2$s&rdquo;"
+
+#: 404.php:22
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oups, la page ne peut être trouvée"
