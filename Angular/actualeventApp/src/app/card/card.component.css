@@ -1,0 +1,33 @@
+.card {
+    position: relative;
+    display: flex;
+    height: 200px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px #131919;
+}
+
+.card a {
+    position: absolute;
+    right: 28px;
+    bottom: 10px;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    background-color: #FC4349;
+}
+
+.card-img img {
+    width: 260px;
+    height: 100%;
+}
+
+.card-containt {
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+.card-containt h2 {
+    padding-bottom: 12px; 
+    border-bottom: 1px solid #B8AE9C;
+    color: #FC4349;
+}

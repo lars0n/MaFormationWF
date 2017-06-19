@@ -1,0 +1,17 @@
+/* ************* Header ************ */
+
+header {
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: #FC4349; 
+}
+
+header a {
+    display: inline-block;
+    margin: 8px 0 0 10px; 
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}

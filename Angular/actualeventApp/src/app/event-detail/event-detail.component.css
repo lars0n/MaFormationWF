@@ -1,0 +1,71 @@
+.event-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.event-title h2 {
+    color: #FC4349;
+    margin: 2px 0px 3px 0px;
+}
+
+.event-title span {
+    color: #F77A52;
+}
+
+.event-title a {
+    border: none;
+    padding: 17px 16px 0px 16px;
+    font-size: 18px;
+    background: #E3E7E8;
+    color: #FC4349;
+    text-decoration: none;
+}
+
+/************** */
+
+.tag {
+    margin: 15px 0;
+}
+
+.tag a {
+    margin-right: 10px; 
+    padding: 1px 10px;
+    text-decoration: none;
+    background-color: #3498DB;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* **************** */
+
+.event .event-img {
+    width: 55%;
+}
+
+/* *********** */
+.modalite {
+    padding: 10px 12px;
+    box-shadow: 0 1px 8px;
+    background-color: #ECF0F1;
+    color: gray;
+}
+
+.modalite h3 { 
+    margin-top: 5px;
+    margin-bottom: 8px;
+    color: #F77A52;
+}
+.modalite ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+/* google map*/
+h3 {
+ color: #F77A52;
+} 
+
+agm-map {
+  height: 300px;
+}

@@ -1,0 +1,9 @@
+.containt-content {
+    position: relative;
+    top: -145px;
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 8px #131919;
+}

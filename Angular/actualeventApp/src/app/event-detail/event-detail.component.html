@@ -1,0 +1,30 @@
+<div class="event" *ngFor="let event of eventtable">
+  <div class="event-title">
+    <div>
+      <h2>{{event.nom}}</h2>
+      <span>publié le {{event.created | date:"d MMM y"}}</span>
+    </div>
+    <a href="#" (click)="close()">X</a>
+  </div>
+  <div class="tag">
+    <span>Tags : </span>
+    <a href="" *ngFor="let tag of event.tags" >{{tag.nom}}</a>
+  </div>
+  <!--<img class="event-img" src="http://quefaire-api.paris.fr/images/12456" alt="">-->
+  <p>{{event.small_description}}</p>
+  <div class="modalite">
+    <h3>Info</h3>
+    <ul>
+      <li>Lieux     : {{event.lieux}}</li>
+      <li>Periode   : du {{event.periodes[0].dateStart | date:"d MMMM y"}} au {{event.periodes[0].dateEnd | date:"d MMMM y"}} </li>
+      <li>Evenement : {{event.priceType}}</li>
+      <li>Prix      : {{event.priceDetail}}</li>
+      <li><a [href]="event.accessLink">Lien d'achat</a></li>
+    </ul>
+  </div>
+  <h3>Carte</h3>
+  <agm-map [latitude]="event.lat" [longitude]="event.lon" [zoom]="11">
+    <agm-marker [latitude]="event.lat" [longitude]="event.lon"></agm-marker>
+  </agm-map>
+  <!--Google map peut etre-->
+</div>
