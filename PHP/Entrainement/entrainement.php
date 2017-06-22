@@ -490,16 +490,328 @@ echo "<table><tr>";
     }
 echo "</tr></table>";
 
-echo "<br/>";
+echo "<hr/>";
 
-// affiche une table de 0 a 99
+// affiche une table de 0 a 99 avec 2 boucle
 echo "<table>";
     for ($i=0; $i < 10; $i++)
     {
         echo "<tr>";
             for ($y=0; $y < 10 ; $y++) {
-                echo "<td>$i$y</td>"; 
+                echo '<td>'. $i . $y . '</td>'; 
             }
         echo "</tr>";
     }
 echo "</table>";
+
+echo "<hr/>";
+
+// affiche une table de 0 a 99 avec un modulo
+echo "<table><tr>";
+    for ($i=0; $i < 100 ; $i++) {
+
+        if($i % 10 == 0 AND $i !=0) {
+            echo '</tr><tr>';
+        }
+
+        echo "<td>$i</td>"; 
+    }
+echo "</tr></table>";
+
+echo '<br />';
+
+// affichage météo
+function  affichage_meteo($saison, $temperature)
+{
+    return "Nous sommes en " . $saison . ' et il fait ' . $temperature . ' degré(s)<br />';
+    echo 'nous somme mardi'; // cette instruction ne sera jamais exécutée car après un return.
+    // le return dans une fonction nous fait sortir de la fonction 
+}
+
+echo affichage_meteo("été", 34);
+echo affichage_meteo("hiver", -1);
+echo affichage_meteo("printemps", 18);
+
+echo '<hr />';
+
+function  affichage_meteo2($saison, $temperature)
+{
+    $reponse = '';
+
+    if ($saison === 'printemps') 
+    {
+        $reponse = "Nous sommes au " . $saison ;
+    } else 
+    {
+        $reponse = "Nous sommes en " . $saison ;
+    }
+
+    if($temperature >= -1 && $temperature <= 1)
+    {
+        $reponse .= ' et il fait ' . $temperature . ' degré<br />';
+    }else 
+    {
+        $reponse .= ' et il fait ' . $temperature . ' degrés<br />';
+    }
+
+    return $reponse;
+}
+
+echo affichage_meteo2("été", 34);
+echo affichage_meteo2("hiver", -1);
+echo affichage_meteo2("printemps", 18);
+
+echo '<hr />';
+
+// meteo avec des ternaire
+function affichage_meteo3($saison, $temperature)
+{
+    $a = ($saison === 'printemps') ? 'au': 'en';
+
+    $degre = ($temperature >= -1 && $temperature <= 1) ? 'degré': 'degrés';
+
+    return "Nous sommes ". $a . $saison . ' et il fait ' . $temperature . $degre .'<br />';
+}
+
+echo affichage_meteo2("été", 34);
+echo affichage_meteo2("hiver", -1);
+echo affichage_meteo2("printemps", 18);
+
+echo '<hr />';
+
+function  meteo($saison, $temperature)
+{
+    $en = 'en';
+    $s  = 's';
+
+    if ($saison === 'printemps') 
+    {
+        $en = 'au';
+    } 
+  
+    if($temperature >= -1 && $temperature <= 1)
+    {
+        $s = '';
+    }
+
+    return "Nous sommes ". $en . $saison . ' et il fait ' . $temperature . 'degré' . $s .'<br />';
+}
+
+echo meteo("été", 34);
+echo meteo("hiver", -1);
+echo meteo("printemps", 18);
+
+echo '<hr />';
+
+
+/* ****************************** *\
+    #[10]Inclusion de fichier
+\* ****************************** */
+echo '<h1>Inclusion de fichier</h1>';
+// créer un fichier dans le méme dossier que celui-ci: exemple.inc.php
+// dans ce fichier mettez du texte. (lorem ipsum, html, ..)
+
+echo '<b>Première fois avec include:</b><br/>';
+include ("exemple.inc.php");
+
+
+echo '<hr/><b>deuxieme fois avec include_once:</b><br/>';
+include_once ("exemple.inc.php");
+
+echo '<hr/><b>premiere fois avec require:</b><br/>';
+require ("exemple.inc.php");
+
+echo '<hr/><b>deuxieme fois avec require_once:</b><br/>';
+require_once ("exemple.inc.php");
+
+/*
+Difference entre include et require:
+Encas d'erreur comme par exemple une faute de frappe sur le nom du fichier ou le fichier a été déplacé, etc ..
+- Include provoque une erreur MAIS  continu l'execution du script.
+- Require provoque une erreur ET bloque l'exécution la suite du script.
+*/
+
+/* ****************************** *\
+    #[12]Les tableaux ARRAY
+\* ****************************** */
+echo '<h1>Les tableaux ARRAY</h1>';
+// un tableaux array est déclaré un peu comme une variable sauf qu'au lieu de ne conserver qu'une seule et unique valeur, dans un tableau nous allons avoir un ensemble de valeur.
+
+function pretable($tableau, $debug = "var") {
+    if ($debug == "var")
+    {
+        echo '<pre>'; var_dump($tableau); echo '<pre>'; 
+    } else
+    {
+        echo '<pre>'; print_r($tableau); echo '<pre>';
+    }
+}
+
+// déclaration d'un tableau
+$tableau = array('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche');
+
+// outil pour pouvoir voir le contenu du tableau:
+echo '<b>Affichage du tableau avec print_r:</b><br>';
+echo '<pre>'; print_r($tableau); echo '<pre>';
+
+// autre façon de déclarer un tableux array
+
+$tab[] = 'France';
+$tab[] = 'Italie';
+$tab[] = 'Espagne';
+$tab[] = 'Angleterre';
+$tab[] = 'Portugal';
+$tab[] = 'Belgique';
+$tab[] = 'Hollande';
+
+pretable($tab);
+
+echo $tab[2].'<br/>'; //por extraire un élément du tableau array, on appelle l'indice correspondant.
+// dans le doute faire un var_dump ou print_r pour vérification.
+
+// Boucle foreach pour les tabeaux de données ARRAY ou Object
+
+foreach($tab AS $valeur)
+{
+    // foreach est un outils pour faire une boucle spécifique aux tableaux array & object.
+    // cette boucle est dynamique et tournera autant de fois qu'il y a d'éléments dans notre tableu ou objet
+    // la mot clé AS est obligatoire et permet de donner un alias via une variable qui représentera à chaque tour de boucle la valeur en cours.
+    echo $valeur.'<br>';
+}
+
+echo '<hr/>';
+
+// pour récuperer également l'indice en cours, il nous suffit de rajouter une variable de réception après le mot cle AS:
+foreach ($tab as $ind => $val) {
+    echo $ind . ' - ' . $val . '<br>';
+}
+
+// il est possible de choisir nous meme les les indices
+$plats = array( 'un' => 'pâtes', 'deux' => 'Crepes', 'trois' => 'Salade de fruit', 77 => 'Eau');
+
+pretable($plats);
+
+$couleur = [];
+
+$couleur['j'] = 'jaune';
+$couleur['b'] = 'bleu';
+$couleur['bl'] = 'blanc';
+$couleur['r'] = 'rouge';
+$couleur['v'] = 'vert';
+$couleur['p'] = 'pourpre';
+
+pretable($couleur);
+
+// pour connaitre la taille d'un tableau (combien d'éléments dans le  tableau array)
+echo 'taille du tableau couleur'. count($couleur);
+echo 'taille du tableau couleur'. sizeof($couleur);
+
+
+
+/* ****************************** *\
+    #[13]Les tableaux ARRAY multidimensionnel
+\* ****************************** */
+echo '<h1>Les tableaux ARRAY multidimensionnel</h1>';
+// nous parlons de tableaux array multidimensionnel lorsqu'un tableau est lui meme contenu dans un autre tabeaux
+
+
+$tableau_etudiants = Array(
+    0 => Array
+        (
+            'pseudo' => 'Marie',
+            'Nom' => 'Durand',
+            'email' => 'marie@email.fr'
+        ),
+    1 => Array
+        (
+            'pseudo' => 'Luc',
+            'Nom' => 'Dupond',
+            'email' => 'luc@email.fr'
+        ),
+    2 => Array
+        (
+            'pseudo' => 'Jean',
+            'Nom' => 'Soleil',
+            'email' => 'jean@email.fr'
+        )
+);
+
+/*$tableau_etudiants = [ 
+    0 => [
+        'pseudo'    => 'Marie',
+        'Nom'       => 'Durand',
+        'email'     => 'marie@email.fr'   
+    ],
+    1 => [
+        'pseudo'    => 'Luc',
+        'Nom'       => 'Dupond',
+        'email'     => 'luc@email.fr'   
+    ],
+    2 => [
+        'pseudo'    => 'Jean',
+        'Nom'       => 'Soleil',
+        'email'     => 'jean@email.fr'   
+    ]
+];*/
+
+echo '<pre>'; print_r($tableau_etudiants); echo '</pre>';
+
+echo $tableau_etudiants[1]['email']; // nous rentrons d'abords à l'indice 1 du premier niveau puis a l'indice 'email' du deuxième niveau
+
+echo '<hr/>';
+
+$taille_tableau = count($tableau_etudiants);
+for ($i=0; $i < $taille_tableau ; $i++) {
+    // afficher les email du deuxieme niveau de ce tableaux 
+    echo $tableau_etudiants[$i]['email'] . '</br>';
+}
+
+// avec foreach
+foreach($tableau_etudiants AS $valeur)
+{
+    echo $valeur['email']. '<br/>';
+}
+
+/* ****************************** *\
+    #[14]Les Objet
+\* ****************************** */
+echo '<h1>Les Objet</h1>';
+// un objet est un autre type de données un peu à la manière d'un array, il permet de conserver des valeurs mais cela va plus loin puisqu'on peut également avoir des fonction dans un objet.
+// une information dans un objet s'appelle une proprété ou attribut
+// une fonction dans un objet s'appelle une methode
+
+// un objet est toujours issu d'une classe (son modèle de construction)
+
+// pour déclarer une classe
+class Etudiant {
+    public $prenom = 'Marie';
+    // public est un mot clé permettant de préciser que l'élément sera accessible directement sur l'objet. Sinon il faudrait passer par des methodes permettant de récupérer cette information ou de la modifier. (il existe aussi protected / private / static);
+
+    public $age = 25;
+
+    public function pays()
+    {
+        return 'France';
+    }
+
+}
+
+// un objet est un conteneur symbolique, qui possède sa propre existence et incorpore des informations (propriétes) et des fonctions (methodes)
+
+// Pour instancier un objet :
+$mon_objet_1 = new Etudiant(); // new est un mot clé obligatoire permettant d'instancier un objet depuis une classe.
+
+echo '<pre>' . var_dump($mon_objet_1) . '<pre>';
+
+// pour voir les methodes de l'objet;
+echo '<pre>' . var_dump(get_class_methods($mon_objet_1)) . '<pre>';
+
+// pour récupérer une proprété de l'objet
+echo $mon_objet_1->prenom . '<br/>';
+
+// pour récupérer une methode de l'objet'
+echo $mon_objet_1->pays();
+
+// modification d'une propriété
+$mon_objet_1->prenom = "pierre";
+echo $mon_objet_1->prenom . '<br/>';
