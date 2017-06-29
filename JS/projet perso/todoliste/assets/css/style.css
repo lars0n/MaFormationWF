@@ -1,0 +1,92 @@
+body {
+    background-color: #2A2C2B;
+    margin: 0;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.todoliste {
+    width: 25%;
+    min-height: 400px;
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color: #F4F5F0;
+}
+
+.todoliste input {
+    width: 85%;
+    padding: 15px;
+    border: none;
+    
+    font-size: 18px;
+    color: white;
+    background-color: #00A388;
+}
+
+.todoliste input::placeholder {
+    color: white;
+}
+
+.todoliste input:focus {
+    outline: none;
+}
+
+.todoliste-add {
+    background-color: #00A388;
+}
+
+#add{
+    padding: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    margin: 10px 0;
+    padding: 15px 10px;
+    box-shadow: 0 2px 4px #D0D0DA;
+    transition: 0.5s ease-out;
+}
+
+.fa {
+    float: right;
+}
+
+.fa-check-circle-o {
+    color: lightskyblue;
+    cursor: pointer;
+}
+
+.fa-times-circle-o {
+    margin-right: 5px;
+    color: darkred;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.disable {
+    color: grey;
+    text-decoration: line-through;
+    background-color: lightgray;
+    transform: rotateX(360deg);  
+}
+
+.disable .fa-check-circle-o {
+    color: grey;
+}
+
+.disable .fa-times-circle-o {
+    opacity: 100;
+    cursor: pointer;
+}
+
+.remove {
+    transform: translateX(100%);
+}

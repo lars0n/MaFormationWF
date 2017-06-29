@@ -61,11 +61,11 @@
     list-style-type: none;
 }
 
-/* google map*/
 h3 {
- color: #F77A52;
-} 
+    color: #F77A52;
+}
 
+/* google map*/
 agm-map {
-  height: 300px;
+    height: 400px;
 }

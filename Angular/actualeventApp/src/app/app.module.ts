@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 
-import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 import { EventService } from './event.service';
 
@@ -12,16 +12,9 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
 import { ContaintContentComponent } from './containt-content/containt-content.component';
 import { CardComponent } from './card/card.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
-import { AgmCoreModule } from '@agm/core';
+import { CategoriesComponent } from './categories/categories.component';
 
-const appRoutes: Routes = [
-  { path: 'events', component: CardComponent },
-  { path: 'event/:id', component: EventDetailComponent },
-  { path: '',
-    redirectTo: '/heroes',
-    pathMatch: 'full'
-  },
-];
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -30,12 +23,13 @@ const appRoutes: Routes = [
     JumbotronComponent,
     ContaintContentComponent,
     CardComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBnCpjOumG-b7yN-1qVDBPp5rsyRrYGa4Y'
     })

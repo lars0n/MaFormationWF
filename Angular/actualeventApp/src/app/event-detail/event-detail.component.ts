@@ -3,6 +3,7 @@ import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 import 'rxjs/add/operator/switchMap';
 
+
 import { EventService } from "app/event.service";
 
 @Component({
@@ -12,7 +13,7 @@ import { EventService } from "app/event.service";
 })
 export class EventDetailComponent implements OnInit {
   eventtable: any[];
-  
+  text: any;
 
   constructor(
     private eventService: EventService,
@@ -23,11 +24,11 @@ export class EventDetailComponent implements OnInit {
   ngOnInit(): void {
     this.route.params
             .switchMap((params: Params) => this.eventService.getEvent(+params['id']))// le + permet de transformer en type number
-            .subscribe(event => this.eventtable = event)
+            .subscribe(event => {this.eventtable = event; this.text = JSON.parse(event[0].description)})
   }
 
   close(): void {
         this.location.back();
-    }
-    
+  }
+
 }

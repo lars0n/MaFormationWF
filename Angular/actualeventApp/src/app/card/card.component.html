@@ -1,6 +1,12 @@
+<div class="title-categorie">
+  <h2>Evenement à venir</h2>
+  <!--j'ai voulu utiliser en event emiter pour recup les catégorie mais inutil-->
+  <!--<app-categories (categorieID)="unTruc($event)"></app-categories>-->
+  <app-categories></app-categories>
+</div>
 <div class="card" *ngFor="let event of events">
   <div class="card-img">
-    <img [src]="event.image.url" [alt]="event.image.alt">
+    <img [src]="event.image.url" alt="">
   </div>
   <div class="card-containt">
     <h2>{{event.title}}</h2>

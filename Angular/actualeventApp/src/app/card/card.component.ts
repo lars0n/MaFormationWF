@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }   from '@angular/router'
+import { ActivatedRoute,Params }   from '@angular/router';
+
+import 'rxjs/add/operator/switchMap';
 
 import { EventService } from '../event.service';
 
@@ -12,14 +14,22 @@ export class CardComponent implements OnInit {
   /*events: any[];*/
   events: any[];
 
-  constructor(private eventService: EventService, private router: Router) { }
+  constructor(private eventService: EventService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    this.getEvents()
+  ngOnInit(): void {
+    /*this.getEvents();*/
+    this.route.params
+            .switchMap((params: Params) => this.eventService.getEvents(+params['id']))// le + permet de transformer en type number
+            .subscribe(events => this.events = events);
   }
 
-  getEvents(): void {
+  /*getEvents(): void {
     this.eventService.getEvents().then(events => this.events = events);  
-  }
+  }*/
+
+  // pas util(eventemiter)
+  /*unTruc(idevent) {
+    console.log(idevent);
+  }*/
 
 }

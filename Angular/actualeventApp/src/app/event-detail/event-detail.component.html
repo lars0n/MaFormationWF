@@ -11,7 +11,7 @@
     <a href="" *ngFor="let tag of event.tags" >{{tag.nom}}</a>
   </div>
   <!--<img class="event-img" src="http://quefaire-api.paris.fr/images/12456" alt="">-->
-  <p>{{event.small_description}}</p>
+  <div [innerHtml]="text[0].data.block"></div>
   <div class="modalite">
     <h3>Info</h3>
     <ul>
@@ -22,9 +22,10 @@
       <li><a [href]="event.accessLink">Lien d'achat</a></li>
     </ul>
   </div>
+  <!--Google map peut etre-->
   <h3>Carte</h3>
   <agm-map [latitude]="event.lat" [longitude]="event.lon" [zoom]="11">
     <agm-marker [latitude]="event.lat" [longitude]="event.lon"></agm-marker>
   </agm-map>
-  <!--Google map peut etre-->
 </div>
+

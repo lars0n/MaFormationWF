@@ -1,0 +1,29 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.profil {
+  position: relative;
+}
+
+.profil .profil-image {
+  float: left;
+  margin-left: 60px;
+  width: 260px;
+  height: 150px;
+}
+
+.profil img {
+  position: relative;
+  top: -110px;
+  
+}
+
+.profil-background {
+  background-image: url('../img/beach.jpg');
+  height: 350px;
+}

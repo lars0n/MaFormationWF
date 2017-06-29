@@ -1,0 +1,21 @@
+<button (click)="toggleCategorie()">Categories</button>
+<div *ngIf="showCategorie" class="categories">
+  <div class="content-categorie">
+    <a routerLink="/events/1">Festivités</a>
+    <a routerLink="/events/2">Expositions</a>
+    <a routerLink="/events/4">Concerts</a>
+    <a routerLink="/events/6">Rencontre sportive</a>
+  </div>
+  <div class="content-categorie">
+    <a routerLink="/events/16">Design / Mode</a>
+    <a routerLink="/events/18">Sciences / Techniques</a>
+    <a routerLink="/events/20">Théâtre</a>
+    <a routerLink="/events/21">Humour</a>
+  </div>
+  <div class="content-categorie">
+    <a routerLink="/events/22">Danse</a>
+    <a routerLink="/events/7">Salon / Expo vente</a>
+    <a routerLink="/events/39">Loisirs / Jeux</a>
+    <a routerLink="/events/24">Cirque / Art de la Rue</a>
+  </div>
+</div>

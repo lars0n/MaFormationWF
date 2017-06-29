@@ -1,3 +1,14 @@
+.title-categorie::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.title-categorie h2 {
+    color: #FC4349;
+    float: left;
+}
+
 .card {
     position: relative;
     display: flex;
