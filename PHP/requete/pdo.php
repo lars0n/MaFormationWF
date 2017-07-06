@@ -40,6 +40,8 @@ echo '<pre>'; var_dump(get_class_methods($pdo));  echo '</pre>';
 // insert
 //$resultat = $pdo->exec("INSERT INTO employes (prenom, nom, sexe, service, salaire, date_embauche) VALUES ('lahcen', 'ait', 'm', 'informatique', 2500, '2017-09-28')");
 //echo '<pre>'; var_dump($resultat);  echo '</pre>';
+// pour récupèrer le dernier id inséré:
+// echo $pdo->lastInsertID()
 
 // 3 - PDO: QUERY => SELECT + ,FETCH(pour un seul resultat)
 $resultat = $pdo->query("SELECT * FROM employes WHERE id_employes=350");

@@ -11,8 +11,17 @@
     <title>Ma Boutique</title>
     <link rel="icon" href="<?= URL?>assets/img/icone.jpg">
 
+    <!-- recaptcha.js-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
     <!-- Bootstrap core CSS -->
     <link href="<?= URL?>assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,700&subset=latin-ext" rel="stylesheet">
+
+    <!-- zoom.js css-->
+    <link rel="stylesheet" href="https://fat.github.io/zoom.js/css/zoom.css">
 
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="<?= URL?>assets/css/style.css">

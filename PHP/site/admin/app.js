@@ -1,17 +1,5 @@
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/locales/fr_CA/faker.fr_CA.js" type="text/javascript"></script>
-<script>
-  var reference = faker.random.uuid(); // Caitlyn Kerluke
+  faker.locale = "fr_CA";
+  //var reference = faker.random.number(); // Caitlyn Kerluke
   var categorie = faker.commerce.department(); // Caitlyn Kerluke
   var titre = faker.commerce.productName(); // Caitlyn Kerluke
   var description = faker.lorem.paragraph(); // Caitlyn Kerluke
@@ -28,7 +16,15 @@
   console.log(couleur);
   console.log(prix);
   console.log(stock);
-</script>
 
-</body>
-</html>
+  //document.getElementById('reference').value    = reference;
+  document.getElementById('titre').value        = titre;
+  document.getElementById('description').value  = description;
+  document.getElementById('prix').value         = prix;
+  document.getElementById('stock').value        = stock;
+
+  var form = document.querySelector('form');
+
+  
+// https://github.com/fat/zoom.js/
+  

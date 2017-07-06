@@ -179,6 +179,8 @@ include('inc/nav.inc.php');
           <textarea class='form-control' name="adresse" id="adresse" cols="30" rows="5"><?= $adresse?></textarea>
         </div>
 
+        <div class="g-recaptcha" data-sitekey="6LcMeicUAAAAAOApHqk0UIlx0aSofm8Bp2SVNSa2"></div>
+
         <button type="submit" class="btn btn-primary btn-block">Inscription</button>
        
       </form> 
