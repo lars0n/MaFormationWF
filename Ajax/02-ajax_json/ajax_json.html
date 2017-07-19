@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Ajax info</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-group col-sm-6 col-sm-offset-2">
+            <select onchange="ajax();" name="" id="choix" class="form-control">
+                <option>Laura</option>
+                <option value="stephanie">Stéphanie</option>
+                <option>Guillaume</option>
+                <option>Amandine</option>
+                <option>Daniel</option>
+                <option>Julien</option>
+            </select>
+        </div>
+        <div id="resultat">
+
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+
+        function ajax() {
+            var file = 'ajax_json.php';
+
+            if(window.XMLHttpRequest)
+                var xhttp = new XMLHttpRequest(); // pour la plupart des navigateur
+            else
+                var xhttp = new ActiveXObject("Microsoft.XMLHTTP"); // pour Internet explorer
+
+            // on récupère la valeur du champ select
+            var choix = document.getElementById("choix").value;
+            console.log(choix);
+
+            // préparation du ou des parametres
+            var parametres = "personne=" + choix;
+
+            xhttp.open("POST",file,true);
+            // la ligne suivante est obligatoire en methode post
+            xhttp.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+
+            // mise en place de l'evenement
+            xhttp.onreadystatechange = function () { 
+                if(xhttp.readyState == 4 && xhttp.status == 200) {
+                    console.log(xhttp.responseText);
+                    document.getElementById('resultat').innerHTML = JSON.parse(xhttp.responseText).resultat;
+                }
+             }
+            
+            xhttp.send(parametres); // on envoie avec les parametres (personne=valeur)
+        }
+
+    </script>
+</body>
+</html>

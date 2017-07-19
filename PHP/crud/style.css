@@ -1,0 +1,10 @@
+footer {
+    height: 50px;
+    color: white;
+    background-color: lightgray;
+    text-align: right;
+} 
+
+a.navbar-brand {
+    padding: 5px 5px;
+}

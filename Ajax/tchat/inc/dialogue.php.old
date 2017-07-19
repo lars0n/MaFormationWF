@@ -1,0 +1,41 @@
+<?php 
+    // inclusion du fichier contenant la connexion a la bdd ainsi que le lancement d'une session
+    require("inc/init.inc.php");
+    include("inc/header.inc.php"); 
+
+?>
+
+<div class="chat_window">
+    <div class="top_menu">
+        <div class="buttons">
+            <div class="button close"></div>
+            <div class="button minimize"></div>
+            <div class="button maximize"></div>
+        </div>
+        <div class="title">Bonjour <?= $_SESSION["utilisateur"]["pseudo"] ?></div>
+    </div><!-- ./top_menu-->
+    <ul class="messages">
+    </ul>
+    <div id="liste_membre_connecte"></div>
+    <div class="bottom_wrapper clearfix">
+        <div class="message_input_wrapper">
+            <!--<img src="assets/smil/smiley1.gif" alt=":)">-->
+            <input class="message_input" placeholder="Tapper votre message ici..." />
+        </div>
+        <div class="send_message">
+            <div class="icon"></div>
+            <div class="text">Envoyer</div>
+        </div>
+    </div>
+</div><!-- ./chat_window -->
+<div class="message_template">
+    <li class="message">
+        <div class="avatar"></div>
+        <div class="text_wrapper">
+            <div class="text"></div>
+        </div>
+    </li>
+</div>
+
+
+<?php include("inc/footer.inc.php") ?>

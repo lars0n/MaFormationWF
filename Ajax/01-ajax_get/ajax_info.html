@@ -1,0 +1,67 @@
+<!--
+    Référence pour l'objet XMLHttpRequest
+    réf: https://msdn.microsoft.com/en-us/library/ms535874(v=vs.85).aspx
+    réf: https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest
+
+    Les status de la requete XMLHttpRequest
+    - 0 => objet crée, demande non initialisé
+    - 1 => connexion avec le serveur établie
+    - 2 => demande reçue par le serveur
+    - 3 => traitement coté serveur
+    - 4 => demande terminée et réponse reçus
+
+    Statuts HTTP:
+    https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP
+
+    "200" => "ok"
+    "403" => "forbidden"
+    "404" => "Not found"
+
+    Nous attendrons toujours que le statut de la requete soit à 4 et le statut http
+    soit à 200 afin de manipuler la réponse.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Ajax info</title>
+</head>
+<body>
+    <div class="container">
+        <div id="demo" class="text-center">
+            <h1>Titre</h1>
+        </div>
+        <button class="btn btn-success block-center" id="action">Changer le titre</button>    
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        // on récupère l'élément action et on ajoute lors de l'evenement clic le déclenchement d'une fonction
+        document.getElementById('action').addEventListener('click', changerTitre);
+
+        function changerTitre() { 
+            //console.log('evenement ok');
+            // instanciation de l'objet XMLHttpRequest
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () { 
+                console.log('Statut http: ' + xhttp.status);// statut http
+                console.log('Statut Ajax: ' + xhttp.readyState);// statut requete ajax
+                if(xhttp.readyState == 4 && xhttp.status == 200){
+                    document.getElementById('demo').innerHTML = xhttp.responseText;
+                }
+             };
+
+             xhttp.open("GET", "ajax_info.txt", true);// on prépare // 1er argument: la methode, 2eme argumenet: le fichier cible // 3eme argument Asynchrone (par defaut)
+             xhttp.send(); // envoie
+         }
+    </script>
+</body>
+</html>

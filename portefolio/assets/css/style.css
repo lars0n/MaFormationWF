@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
+    transition: 0.5s;
+}
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 1);
+    background-image: url('../img/drink-864958_1920.jpg');
+    background-size: cover;
+    background-position: 0px 600px;
+}
+
+#MesProjet{
+    background-color: #EEEFF7;
+}
+
+.show-projet {
+    cursor: pointer;
+}
+
+.show-projet a {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card-img-top {
+    height: 265px;
+    width: 340px;
+    transition: 0.5s;
+}
+
+.show-projet:hover .card-img-top {
+    opacity: 0.2;
+}
+
+.show-projet:hover a {
+    opacity: 1;
+}
+
+#html, #css, #js, #php {
+    width: 250px;
+    height: 250px;
+}
+
+.collapse {
+    width: 100%;
+}
