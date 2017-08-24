@@ -1,0 +1,51 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Admin rubriques' %}
+
+{% block content %}
+    <h1>Gestions Rubriques</h1>
+    <p>
+        <a href="{{ path('admin_category_edit') }}" class="btn btn-primary">Nouvelle rubriques</a>
+    </p>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                {% for colum in table %}
+                    <th>{{ colum.name }}</th>
+                {% endfor %}
+                    <th >Editer</th>
+                    <th >Supprimmer</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for category in categories %}
+            <tr>
+                <td>{{ category.id }}</td>
+                <td>{{ category.name }}</td>
+                <td><a href="{{ path('admin_category_edit', { id : category.id }) }}" class="btn btn-info">edit</a></td>
+                <td><a class="btn btn-danger" data-toggle="modal" data-target="#myModal{{ category.id }}">Supprimer</a></td>
+            </tr>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal{{ category.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close bg-danger" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            Voullez-vous supprimer ?
+                        </div>
+                        <div class="modal-footer">
+                            <a href="{{ path('admin_category_delete', { id : category.id }) }}" class="btn btn-danger">Supprimer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+
+

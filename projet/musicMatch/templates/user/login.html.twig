@@ -1,0 +1,18 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Connexion' %}
+
+{% block content %}
+    <div class='page_header'>
+        <h1>Connexion</h1> 
+    </div>
+    {{ form_start(loginForm) }}
+            {{ form_row(loginForm.email) }}
+        <div class="form-group">
+            {{ form_label(loginForm.password, 'Votre Mot de passe') }}
+            {{ form_widget(loginForm.password, {'attr': {
+                'class' : 'form-control'
+            }}) }}
+        </div>
+    {{ form_end(loginForm) }}
+{% endblock %}

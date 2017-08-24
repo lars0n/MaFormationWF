@@ -1,0 +1,27 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Categories' %}
+
+
+{% block content %}
+    {% if articles %}
+        <div class="page-header">
+            <h1>Categorie : {{ articles[0].categoryname }}</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                {{ include('article_list.html.twig') }}
+            </div><!-- col-8 -->
+            <div class="col-md-4">
+                {{ include('category_list.html.twig') }}
+            </div>
+        </div>
+    {% else %}
+        <h1>Pas de résultat</h1>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-8">
+                {{ include('category_list.html.twig') }}
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

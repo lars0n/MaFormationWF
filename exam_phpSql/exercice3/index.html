@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Faisons le ménage</h1>
+        </div>
+        <div id="resultat"></div>
+        <form action="" id="form" class="col-md-8 col-md-offset-2" >
+            <legend>Ajouter une nouvelle voiture</legend>
+            <div class="form-group">
+                <label for="marque">Marque</label>
+                <input type="text" class="form-control" name="marque" id="marque">
+            </div>
+            <div class="form-group">
+                <label for="modele">Modèle</label>
+                <input type="text" class="form-control" name="modele" id="modele">
+            </div>
+            <div class="form-group">
+                <label for="annee">Année</label>
+                <input type="text" class="form-control" name="annee" id="annee">
+            </div>
+            <div class="form-group">
+                <label for="couleur">Couleur</label>
+                <input type="text" class="form-control" name="couleur" id="couleur">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enregistrer</button>
+        </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+    <script>
+        $(function(){
+            $("#form").submit(function (e) {
+                e.preventDefault();
+                $this = $(this);
+                $('#resultat').attr("class", "");
+
+                $.post(
+                    'voiture_ajax.php',
+                    $this.serialize(),
+                    function (response) {
+                        console.log(response.message);
+
+                        if(response.statut == 'success'){
+                            $('#resultat').addClass("alert alert-success");
+                            $('#resultat').html(response.message);
+                            $('input').val('');
+                        }else{
+                            $('#resultat').addClass("alert alert-danger");
+                            $('#resultat').html(response.message);
+                        }
+                    },
+                    'json'
+                );
+
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title 'home' %} - My Silex Application</title>
+
+        {% block stylesheets %}
+            {# asset() génère le chemin pour les fichiers qui se trouvent dans le repertoire web#}
+            <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{% for article in articles %}
+    <div class="thumbnail">
+        <div class="caption">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/City_of_London_skyline_from_London_City_Hall_-_Sept_2015_-_Crop_Aligned.jpg/1200px-City_of_London_skyline_from_London_City_Hall_-_Sept_2015_-_Crop_Aligned.jpg" alt="" class="Responsive image" width="720">
+            <h3>{{ article.title }}</h3>
+            <p>
+                Categorie : <small class="label label-primary"> {{ article.categoryname }}</small>
+            </p>
+            <p>{{ article.header }}</p>
+            <p><a href="{{ path('article', { id: article.id }) }}" class="btn btn-primary" role="button">lire la suite</a></p>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,7 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+        <p>Abonné ID : {{ abonne.id_abonne }}</p>
+        <p>Prénom : {{ abonne.prenom }}</p>
+        <p><a href="{{ path('abonnes') }}"> Retour à la liste des abonnes</a></p>
+{% endblock %}

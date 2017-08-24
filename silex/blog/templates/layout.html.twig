@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>{% block title '' %} - My Silex Application</title>
+        {% block stylesheet %}
+            <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/simplex/bootstrap.min.css" rel="stylesheet" integrity="sha384-C0X5qw1DlkeV0RDunhmi4cUBUkPDTvUqzElcNWm1NI2T4k8tKMZ+wRPQOhZfSJ9N" crossorigin="anonymous">
+            <link href="{{ asset('css/main.css') }}" rel="stylesheet" type="text/css" />
+        {% endblock %}
+    </head>
+    <body>
+        {% if user_manager.admin %}
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <a href="#" class="navbar-brand">Menu admin</a>
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="{{ path('admin_categories') }}">Gestions rubriques</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('admin_articles') }}">Gestions articles</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        {% endif %}
+
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <a href="{{ path('homepage') }}" class="navbar-brand">Blog</a>
+                {# inclus le rendu de la route ici #}
+                {{ render(url('category_list')) }}
+                <ul class="nav navbar-nav navbar-right">
+                    {# user_manager est l'objet UserManager, cf app.php : global dans le twig#}
+                    {% if user_manager.user %}{# si un utilisateur est connecté #}
+                        <li>
+                            <a href="#">{{ user_manager.userName }}</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('user_logout') }}">Se Déconnecter</a>
+                        </li>
+                    {% else %}
+                   <li>
+                       <a href="{{ path('user_register') }}">Créer un compte</a>
+                   </li>
+                    <li>
+                        <a href="{{ path('user_login') }}">Se Connecter</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            {% for type, flashes in app.session.flashbag.all %}
+                {% for flash in flashes %}
+                    {%  if type == 'error' %}
+                        {% set type = 'danger' %}
+                    {% endif %}
+                    <div class="alert alert-{{ type }}">{{ flash|raw }}</div>
+                {% endfor %}
+            {%  endfor %}
+            {% block content %}{% endblock %}
+        </div>
+
+
+        {% block javascripts  %}
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        {% endblock %}
+    </body>
+</html>

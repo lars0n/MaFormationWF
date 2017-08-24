@@ -1,0 +1,38 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <table >
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Prenom</th>
+                <th>Détails</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody >
+        {% for abonne in abonnes %}
+            <tr>
+                <td >
+                    {{ abonne.id_abonne }}
+                </td>
+                <td>
+                    {{ abonne.prenom }}
+                </td>
+                <td>
+                    <a href="{{ path('abonne_detail', {id: abonne.id_abonne }) }}">Voir plus</a>
+                </td>
+                <td>
+                    <a href="{{ path('abonne_modif', {id: abonne.id_abonne }) }}">Modifier</a>
+                </td>
+                <td>
+                    <a href="{{ path('abonne_suppression', {id: abonne.id_abonne }) }}">Supprimer</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="{{ path('abonne_ajout') }}">Ajouter un abonnée</a></p>
+
+{% endblock %}

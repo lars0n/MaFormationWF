@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Accueil' %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>Accueil</h1>
+        <p>Anyone who laughs is a communist! Bender, quit destroying the universe! I usually try to keep my sadness pent up inside where it can fester quietly as a mental illness. No! The kind with looting and maybe starting a few fires!</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Me suivre</a></p>
+    </div>
+    <div class="page-header">
+        <h2>Les derniere Articles</h2>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            {{ include('article_list.html.twig') }}
+        </div><!-- col-8 -->
+        <div class="col-md-4">
+            {{ include('category_list.html.twig') }}
+        </div>
+    </div>
+{% endblock %}

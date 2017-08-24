@@ -1,0 +1,7 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <p>{{ hello }}</p>
+    {# génere le  chemin d'une route avec une variable #}
+    <p><a href="{{ path('hello', {name: 'larson'}) }}">Vars la page hello world </a></p>
+{% endblock %}

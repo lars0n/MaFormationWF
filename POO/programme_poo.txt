@@ -1,0 +1,21 @@
+j-1 :
+----
+01-classes-objet-instance-visibilite
+02-getter-setter-constructeur
+03-manipulation-type-argument
+04-constance-static-self
+05-heritage
+
+j-2 :
+----
+06-surcharge-abstraction-finalisation-interface-trait
+07-methodes_magique
+08-classes_existantes
+09-namespace
+10-autoload
+11-PDO (déja vu en partie en procédural)
+12-MVC
+
+j3-4 :
+----
+13-Mini-framework-maison (site boutique-MVC)

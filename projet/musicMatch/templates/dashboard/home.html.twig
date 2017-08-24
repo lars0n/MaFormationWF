@@ -1,0 +1,42 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Dashboard' %}
+
+{% block content %}
+    <div class="container">
+        <div class="page-header">
+            <h1>Dashboard</h1>
+        </div>
+        {% if recommendations %}
+            {% for track in recommendations.tracks %}
+                <div class="panel panel-primary col-sm-4 col-sm-offset-4">
+                    <div class="panel-heading">
+                        <span>Titre : {{ track.name }}</span>
+
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="col-sm-4">
+                            <img src="{{track.album.images[0].url}}" width="200" class="img-responsive">
+                        </div>
+                        <div class="col-sm-8">
+                            <p>Artiste :
+                                {% for artist in track.artists %}
+                                    {% if loop.last %}
+                                        {{ artist.name }}
+                                    {% else %}
+                                        {{ artist.name }},
+                                    {% endif %}
+                                {% endfor %}
+                            </p>
+                            <a href="{{ track.external_urls.spotify }}" > voir sur spotify </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p><strong>No tracks</strong></p>
+        {% endif %}
+    </div>
+
+{% endblock %}

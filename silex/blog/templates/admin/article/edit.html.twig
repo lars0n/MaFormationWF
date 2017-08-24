@@ -1,0 +1,36 @@
+{% extends "layout.html.twig" %}
+
+{% block title 'Edition article' %}
+
+{% block content %}
+    <h1>Gestion des Articles</h1>
+    <form action="" class="well" method="post">
+        <legend>Nouvelle Article</legend>
+        <div class="form-group">
+            <label for="title">Titre</label>
+            <input type="text" name="title" class="form-control" value="{{ article.title }}">
+        </div>
+        <div class="form-group">
+            <label for="header">Entête</label>
+            <input type="text" name="header" class="form-control" value="{{ article.header }}">
+        </div>
+        <div class="form-group">
+            <label for="content">Contenu</label>
+            <textarea name="content" class="form-control" rows="5">{{ article.content }}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="category">Rubrique</label>
+            <select name="category" id="category" class="form-control">
+                <option value="">Choisissez une rubrique</option>
+                {% for category in categories %}
+                    <option value="{{ category.id }}"
+                    {% if category.id == article.categoryId %}selected{% endif %}>
+                        {{ category.name }}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+        <a href="{{ path('admin_articles') }}" class="btn btn-default">Annuler</a>
+    </form>
+{% endblock %}
